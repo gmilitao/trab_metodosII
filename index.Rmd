@@ -1,0 +1,83 @@
+---
+title: "Repositório do trabalho final do curso Métodos quantitativos II"
+author: "Guilherme José Sanches Militão"
+date: "24/12/2022"
+output:
+  rmdformats::robobook:
+    self_contained: true
+    default_style: "light"
+    downcute_theme: "default"
+---
+
+```{=html}
+<style>
+body {
+text-align: justify}
+</style>
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Trabalho final - Métodos quantitativos II (II/2022)
+<br>
+**Lista de documentos que fazem parte do trabalho final da disciplina de métodos quantitativos (II/2022) - PPG-DCP-FFLCH/USP.**
+<br>
+
+#### Scripts R
+
+```{r scripts}
+
+tibble::tibble(
+  arquivo = list.files("R/", pattern = ".R"),
+url = paste0("https://github.com/gmilitao/trab_metodosII/tree/master/R/", arquivo)
+) |> 
+  knitr::kable()
+
+
+```
+
+
+#### Link para download da base tratada:
+
+```{r arquivos rmd}
+
+tibble::tibble(
+  arquivo = "ccp_tratada_valida.csv",
+url = paste0("https://github.com/gmilitao/trab_metodosII/tree/master/dados/", arquivo)
+) |> 
+  knitr::kable()
+
+```
+
+
+
+#### Tabela
+
+Tabela com as quantidades de sistemas constitucionais considerados na análise, por país:
+
+```{r relatorios html}
+
+tibble::tibble(
+  arquivo = list.files("analises/", pattern = ".html"),
+url = paste0("https://gmilitao.github.io/trab_metodosII/analises/", arquivo)
+) |> 
+  knitr::kable()
+
+```
+
+
+#### Arquivo auxiliar com os códigos das análises: 
+
+
+```{r auxiliar quarto}
+
+tibble::tibble(
+  arquivo = list.files("analises/", pattern = ".qmd"),
+url = paste0("https://github.com/gmilitao/trab_metodosII/tree/master/analises/", arquivo)
+) |> 
+  knitr::kable()
+
+```
+
